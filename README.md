@@ -3,7 +3,7 @@ Recently I helped with an incident response and had to spend a few days digging 
 
 
 #### SMB Brute Force Login
-By default windows security log does not log failed login attempts, so we need to look else where to find these events.  The Microsoft-Windows-SMBServer/Security log will show these failed attempts with event id 551.</br>
+By default windows security log does not record failed login attempts, so we need to look else where to find these events.  The Microsoft-Windows-SMBServer/Security log will show these failed attempts with event id 551.</br>
 Here is a view of the log after running a Hydra brute force smb attempt.</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/smbserver-security-log-list.png "SMBServer Security Log List")</br>
 </br>
@@ -27,5 +27,5 @@ Once we see these RDP connection attempts stop, look for successful logins in th
 Now we need to determine what commands where run on the system.  Lets check what was executed using "Run".  Search HKEY_USERS for runMRU.</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/registry-runmru.png "runMRU")</br>
 </br>
-While there is no command line log, there is one for powershell.  Microsoft-Windows-PowerShell/Operational event id 40961 will show when the powershell console is launched.</br>
+While there is no command line log, there is one for powershell, but really only provides useful information if logging is turned on.  About the only event you can obtain is powershell being started.  Microsoft-Windows-PowerShell/Operational event id 40961 will show when the powershell console is launched.</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/powershell-startup.png "PowerShell Startup")</br>
