@@ -1,5 +1,5 @@
 ### <center> Incident Response </center>
-Recently I helped with an incident response and had to spend a few days digging through windows event logs, so I thought it would be helpful to capture some of what I learned.  The purpose of this repository is to show some different types of events and what logs show these events.  Collecting these logs across an enterprise is a different dicsussion that will not be covered.
+Recently I helped with an incident response and had to spend a few days digging through windows event logs, so I thought it would be helpful to capture some of what I learned.  The purpose of this repository is to show some different types of events and what logs show these events.  These events were collected from a Windows 10 LTSB, non-domain joined system.  Collecting these logs across an enterprise is a different discussion that will not be covered.
 
 
 #### SMB Brute Force Login
@@ -19,5 +19,5 @@ Here is the individual log.</br>
 </br>
 Additionally, you can look at the Security log for event id 4624 as an anonymous login.  This event will show the connecting IP.  It will be immediately followed by event id 4634, account logoff.</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/security-4624-anonymous.png)</br>
-Once we see these RDP connection events stop, look for successful logins in the Security log using event id 4624.  Another option is to look in the Microsoft-Windows-TerminalServices-LocalSessionManager/Operational log for a Remote Desktop Services: Session logon succeeded event id 21.</br>
+Once we see these RDP connection attempts stop, look for successful logins in the Security log using event id 4624.  Another option is to look in the Microsoft-Windows-TerminalServices-LocalSessionManager/Operational log for a Remote Desktop Services: Session logon succeeded event id 21.</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/terminal-services-localsessionmanager.png "Terminal Services Local Session Manager")
