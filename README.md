@@ -1,5 +1,5 @@
 ### <center> Incident Response </center>
-Recently I helped with an incident response and had to spend a few days digging through windows event logs, so I thought it would be helpful to capture some of what I learned.  The purpose of this repository is to show some different types of events and what logs show these events.  These events were collected from a Windows 10 LTSB, non-domain joined system.  Collecting these logs across an enterprise is a different discussion that will not be covered
+Recently I helped with an incident response and had to spend a few days digging through windows event logs, so I thought it would be helpful to capture some of what I learned.  The purpose of this repository is to show some different types of events and what logs show these events.  These events were collected from a Windows 10 LTSB, non-domain joined system.  Collecting these logs across an enterprise is a different discussion that will not be covered.
 
 
 #### SMB Brute Force Login
