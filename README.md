@@ -3,7 +3,7 @@ Recently I helped with an incident response and had to spend a few days digging 
 
 
 #### SMB Brute Force Login
-By default windows security log does not record failed login attempts, so we need to look else where to find these events.  Domain Controllers do capture these events.  The Microsoft-Windows-SMBServer/Security log will show these failed attempts with event id 551.</br>
+By default windows security log does not record failed login attempts, so we need to look else where to find these events.  Domain Controllers do capture failed login events.  The Microsoft-Windows-SMBServer/Security log will show these failed attempts with event id 551.</br>
 Here is a view of the log after running a Hydra brute force smb attempt.</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/smbserver-security-log-list.png "SMBServer Security Log List")</br>
 </br>
