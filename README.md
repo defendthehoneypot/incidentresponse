@@ -12,7 +12,9 @@ Here is the individual log that shows the attacking IP.</br>
 </br>
 #### RDP Brute Force Login
 There is not a specific event that will show the failed login event, but the Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational does show a bunch of received connection attempts with event id 261.</br>
-Here is a view of the log after running a Crackmapexec brute force rdp attempt.</br>
+Here is a view of the log after running a [Crackmapexec](https://github.com/byt3bl33d3r/CrackMapExec/wiki/Using-Credentials) brute force rdp attempt.</br>
 ![alt text](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/terminal-services-remote-connection-manager-list.png "TerminalServices RemoteConnection Manager Log")</br>
 Here is the individual log.</br>
-![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/terminal-services-remote-connection-manager.png "TerminalServices RemoteConnection Manager Log")
+![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/terminal-services-remote-connection-manager.png "TerminalServices RemoteConnection Manager Log")</br>
+</br>
+Once we see these events stop we should look for successful logins in the Security log using event id 4624.  Another option is to look in the 
