@@ -21,4 +21,9 @@ Additionally, you can look at the Security log for event id 4624 as an anonymous
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/security-4624-anonymous.png)</br>
 </br>
 Once we see these RDP connection attempts stop, look for successful logins in the Security log using event id 4624.  Another option is to look in the Microsoft-Windows-TerminalServices-LocalSessionManager/Operational log for a Remote Desktop Services: Session logon succeeded event id 21.</br>
-![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/terminal-services-localsessionmanager.png "Terminal Services Local Session Manager")
+![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/terminal-services-localsessionmanager.png "Terminal Services Local Session Manager")</br>
+</br>
+#### Commands run on system
+Now we need to determine what commands where run on the system.  Lets check what was executed using "Run".  Search HKEY_USERS for runMRU.</br>
+![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/registry-runmru.png "runMRU")</br>
+</br>
