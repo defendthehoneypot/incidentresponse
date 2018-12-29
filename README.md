@@ -27,7 +27,7 @@ Once we see these RDP connection attempts stop, look for successful logins in th
 Now we need to determine what commands where run on the system.  Lets check what was executed using "Run".  Search HKEY_USERS for runMRU.</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/registry-runmru.png "runMRU")</br>
 </br>
-Something else that can be determined is what programs were launched by searching in the resgistry.  HKEY_USERS\S-1-5-21-4003696517-2512272945-1976583950-500\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store</br>
+Something else that can be determined is what programs were launched by searching in the resgistry.  HKEY_USERS\SID of User\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/programs-run.png "Programs Run")</br>
 </br>
 While there is no command line log, there is one for powershell, but really only provides useful information if logging is turned on.  About the only event you can obtain is powershell being started.  Microsoft-Windows-PowerShell/Operational event id 40961 will show when the powershell console is launched.</br>
