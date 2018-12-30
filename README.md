@@ -30,11 +30,11 @@ Now we need to determine what commands where run on the system.  Lets check what
 Something else that can be determined is what programs were launched by searching in the registry.  HKEY_USERS\SID of User\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/programs-run.png "Programs Run")</br>
 </br>
-While there is no command line log, there is one for Powershell, but really only provides useful information if logging is turned on.  About the only event you can obtain is Powershell being started.  Microsoft-Windows-PowerShell/Operational event id 40961 will show when the Powershell console is launched.</br>
+While there is no command line log, there is one for Powershell, but really only provides useful information if logging is turned on.  About the only event you can obtain is Powershell being started.  Microsoft-Windows-PowerShell/Operational event id 40961 will show when the Powershell console is launched or run from the command line.</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/powershell-startup.png "PowerShell Startup")</br>
 </br>
 #### Installation of programs
-Look for installation of windows features using the Setup log with event id 9.</br>
+Look for installation of windows features using the Setup log with event id 9.  I would look for installation of RSAT.</br>
 ![](https://github.com/defendthehoneypot/incidentresponse/blob/master/images/install-features-tftp.png "Install Features")</br>
 </br>
 #### Download files
